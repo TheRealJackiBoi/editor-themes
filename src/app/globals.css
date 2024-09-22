@@ -1,107 +1,70 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-/* https://coolors.co/daf1dd-a9c7b3-255349-0b2b26-06221f */
-:root {
-  --background: 184 98.5% 98.16%; /* Light background */
-  --foreground: 184 7% 0.32%; /* Light text color */
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: 184 12% 15%; /* Adjusted for dark mode */
-    --foreground: 184 75% 95%; /* Slightly muted, not too bright */
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
 
 @layer base {
+ * { 
+  --white: #FCFCFC;
+  --honey-green: #daf1dd;
+  --ash-gray: #a9c7b3;
+  --brunswick-green: #255349;
+  --dark-green: #0b2b26;
+  --dark-green-2: #06221f;
+  --black: #0A0A0A;
+  }
   :root {
-    /* Custom Light Mode Palette */
-    --gradient: #0b2b26;
-    --background: 181 97.95% 98.22%;
-    --foreground: 181 5.9% 0.44%;
-
-    --muted: 181 5.9% 91.1%;
-    --muted-foreground: 181 2.95% 41.1%;
-
-    --popover: 181 42.8% 91.1%;
-    --popover-foreground: 181 5.9% 0.55%;
-
-    --card: 181 42.8% 91.1%;
-    --card-foreground: 181 5.9% 0.55%;
-
-    --border: 181 10.9% 89.44%;
-    --input: 181 10.9% 89.44%;
-
-    --primary: 181 59% 11%;
-    --primary-foreground: 181 1.18% 91.1%;
-
-    --secondary: 181 2.95% 95.55%;
-    --secondary-foreground: 181 4.54% 11.1%;
-
-    --accent: 181 2.95% 95.55%;
-    --accent-foreground: 181 4.54% 11.1%;
-
-    --destructive: 0 84.2% 60.2%;
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 45%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    --destructive: 0 72% 51%;
     --destructive-foreground: 0 0% 98%;
-
-    --ring: 181 59% 11%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
     --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
   }
 
   .dark {
-    /* Adjusted Dark Mode Palette */
-    --gradient: #0b2b26; /* Keep the gradient color consistent */
-    --background: 181 12% 12%; /* Darker but still muted for readability */
-    --foreground: 181 85% 95%; /* Lighter foreground but not too stark */
-    
-    --muted: 181 20% 80%; /* Muted colors slightly darkened */
-    --muted-foreground: 181 65% 85%; /* Softer muted foreground */
-
-    --popover: 181 15% 20%; /* Darken popover background */
-    --popover-foreground: 181 85% 98%; /* Ensure readability */
-
-    --card: 181 15% 20%; /* Darken cards to match the background */
-    --card-foreground: 181 85% 98%; /* Consistent with the foreground */
-
-    --border: 181 30% 25%; /* Darken borders */
-    --input: 181 30% 25%; /* Match inputs with dark mode borders */
-
-    --primary: 181 50% 40%; /* Tone down primary color saturation */
-    --primary-foreground: 181 85% 95%; /* Ensure readability on primary */
-
-    --secondary: 181 25% 70%; /* Adjust secondary color */
-    --secondary-foreground: 181 5% 85%; /* Adjust secondary text color */
-
-    --accent: 181 25% 70%; /* Accent color match with secondary */
-    --accent-foreground: 181 5% 85%; /* Accent text color match */
-
-    --destructive: 0 60% 40%; /* Darken destructive color */
-    --destructive-foreground: 0 100% 95%; /* Maintain visibility */
-
-    --ring: 181 50% 40%; /* Softer ring color */
-
-    --radius: 0.5rem;
-  }
-}
-
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
   }
 }
