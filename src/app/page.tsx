@@ -1,5 +1,5 @@
 import Holder from "@/components/common/Holder";
-import ThemeShowcase from "@/components/themes/ThemeShowcase";
+import ThemeShowcase from "@/components/themes/themeCard/ThemeShowcase";
 
 export default function Home() {
   return (

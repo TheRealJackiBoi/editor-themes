@@ -1,12 +1,12 @@
 import { Theme } from "@/lib/definitions"
-import { Card, CardContent } from "../ui/card"
-import CodeSnippet from "./CodeSnippet"
-import { Badge, Download, ExternalLink, Eye } from "lucide-react"
-import { Button } from "../ui/button"
-import Rating from "./Rating"
-import ThemeHeader from "./ThemeHeader"
-import ThemeSupportedEditors from "./ThemeSupportedEditors"
-import ThemeBaseColors from "./ThemeBaseColors"
+import { Card, CardContent } from "@/components/ui/card"
+import CodeSnippet from "@/components/themes/themeCard/CodeSnippet"
+import Rating from "@/components/common/Rating"
+import ThemeHeader from "@/components/themes/themeCard/ThemeHeader"
+import ThemeSupportedEditors from "@/components/themes/themeCard/ThemeSupportedEditors"
+import ThemeBaseColors from "@/components/themes/themeCard/ThemeBaseColors"
+import { Paragraph } from "@/components/ui/Typography"
+import ThemeNavigations from "@/components/themes/themeCard/ThemeNavigations"
 
 const ThemeCard = ({theme}: {theme: Theme}) => {
   return (
@@ -20,7 +20,7 @@ const ThemeCard = ({theme}: {theme: Theme}) => {
                       <ThemeHeader name={theme.name} author={theme.author}/>
                       <Rating rating={theme.rating} />
                     </div>
-                    <p className="text-sm mb-4">{theme.description}</p>
+                    <Paragraph className="text-sm mb-4">{theme.description}</Paragraph>
                     <ThemeBaseColors colors={theme.baseColors}/>
                     <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                         <ThemeSupportedEditors editors={theme.supportedEditors} />
@@ -29,22 +29,7 @@ const ThemeCard = ({theme}: {theme: Theme}) => {
                         <p><span className="font-medium">Last Updated:</span> {theme.lastUpdated.toTimeString()}</p>
                       </div>
                     </div>
-                    <div className="flex flex-wrap gap-4">
-                      <Button variant="outline">
-                        <Eye className="mr-2 h-4 w-4" />
-                        View Details
-                      </Button>
-                      <Button asChild>
-                        <a href={theme.homepageUrl} target="_blank" rel="noopener noreferrer">
-                          <ExternalLink className="mr-2 h-4 w-4" />
-                          Visit Homepage
-                        </a>
-                      </Button>
-                      <Button variant="secondary">
-                        <Download className="mr-2 h-4 w-4" />
-                        Download
-                      </Button>
-                    </div>
+                    <ThemeNavigations name={theme.name} homePage={theme.homepageUrl} />
                   </CardContent>
                 </div>
               </Card>

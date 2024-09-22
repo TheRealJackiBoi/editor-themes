@@ -1,4 +1,4 @@
-import { H2, Muted } from "../ui/Typography"
+import { H2, Muted } from "../../ui/Typography"
 
 const ThemeHeader = ({name, author}: {name: string, author: string}) => {
   return (
