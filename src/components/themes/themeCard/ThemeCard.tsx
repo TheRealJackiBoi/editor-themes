@@ -25,8 +25,8 @@ const ThemeCard = ({theme}: {theme: Theme}) => {
                     <div className="grid grid-cols-2 gap-4 mb-4 text-sm">
                         <ThemeSupportedEditors editors={theme.supportedEditors} />
                       <div>
-                        <p><span className="font-medium">Downloads:</span> {theme.downloads.toLocaleString()}</p>
-                        <p><span className="font-medium">Last Updated:</span> {theme.lastUpdated.toTimeString()}</p>
+                        <p><span className="font-medium"><b>Downloads:</b></span> {theme.downloads.toLocaleString()}</p>
+                        <p><span className="font-medium"><b>Last Updated:</b></span> {`${theme.lastUpdated.getMonth()} / ${theme.lastUpdated.getDate()} / ${theme.lastUpdated.getFullYear()}`}</p>
                       </div>
                     </div>
                     <ThemeNavigations name={theme.name} homePage={theme.homepageUrl} />

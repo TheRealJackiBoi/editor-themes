@@ -1,10 +1,8 @@
-import { Badge } from "lucide-react"
-
-const ThemeBaseColors = ({colors}: {colors: string[]}) => {
+const ThemeBaseColors = ({ colors }: { colors: string[] }) => {
   return (
     <div className="flex flex-wrap gap-2 mb-4">
       {colors.map((color, colorIndex) => (
-        <Badge
+        <div
           key={colorIndex}
           style={{ backgroundColor: color }}
           className="w-6 h-6 rounded-full"
@@ -14,4 +12,4 @@ const ThemeBaseColors = ({colors}: {colors: string[]}) => {
   )
 }
 
-export default ThemeBaseColors
+export default ThemeBaseColors;
